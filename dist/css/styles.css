@@ -10,7 +10,10 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+
+
+
+ :root {
   --bs-blue: #1e30f3;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -102,6 +105,10 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+  margin: 5px;
 }
 
 hr {
@@ -377,6 +384,17 @@ select:disabled {
 
 [list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator {
   display: none !important;
+}
+
+.slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.slide-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 button,
@@ -4617,6 +4635,7 @@ ul {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
+  flex-wrap: wrap;
   border-radius: var(--bs-badge-border-radius);
 }
 .badge:empty {
@@ -8184,6 +8203,7 @@ ul {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  text-wrap: wrap;
 }
 
 .text-capitalize {
@@ -8266,7 +8286,7 @@ ul {
 }
 
 .skills {
-  text-align: justify;
+  text-align: left;
 }
 
 .text-black-50 {
